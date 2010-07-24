@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <title> Nanoreader - Adicionar usuário </title>
+  </head>
+  <body>
+    <% form_for( :user, @user, :url => {:action => 'create' }) do |f| -%>
+      <p>
+        Nome de usuário: 
+        <%= f.text_field :username %>
+      </p>
+      <p>
+        Nome: 
+        <%= f.text_field :name %>
+      </p>  
+      <p>
+        Email: 
+        <%= f.text_field :email %>
+      </p>    
+      <p>
+        <%= f.check_box :is_admin %> Administrador
+      </p>
+      <p>
+        <%= f.submit 'Criar' %>
+      </p>
+    <% end -%>
+    <br />
+    <%= button_to "Voltar", :back %>
+  </body>
+</html>
