@@ -9,7 +9,24 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100724195449) do
+ActiveRecord::Schema.define(:version => 20100727203616) do
+
+  create_table "constraints", :force => true do |t|
+    t.string   "restriction"
+    t.integer  "list_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "feed_items", :force => true do |t|
+    t.datetime "date"
+    t.string   "title"
+    t.text     "description"
+    t.string   "creator"
+    t.text     "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "feed_sources", :force => true do |t|
     t.string   "link"
@@ -23,6 +40,33 @@ ActiveRecord::Schema.define(:version => 20100724195449) do
   create_table "feed_sources_users", :id => false, :force => true do |t|
     t.integer "feed_source_id"
     t.integer "user_id"
+  end
+
+  create_table "interactions", :force => true do |t|
+    t.integer  "feed_item_id"
+    t.integer  "user_id"
+    t.boolean  "read",         :default => false
+    t.boolean  "starred",      :default => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "lists", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "lists_feed_sources", :id => false, :force => true do |t|
+    t.integer "feed_source_id"
+    t.integer "list_id"
+  end
+
+  create_table "subscriptions", :force => true do |t|
+    t.integer  "list_id"
+    t.integer  "user_id"
+    t.integer  "position"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", :force => true do |t|

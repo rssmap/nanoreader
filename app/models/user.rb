@@ -3,4 +3,9 @@ class User < ActiveRecord::Base
   validates_uniqueness_of :username, :message => "Usuário já existe."
   
   validates_uniqueness_of :email, :message => "Email já cadastrado."
+  
+  has_many :feed_items, :through => :interactions
+  
+  has_many :lists, :through => :subscriptions
+  
 end
