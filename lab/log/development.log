@@ -1,0 +1,194 @@
+
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-24 19:16:59) [GET]
+
+ActionController::RoutingError (No route matches "/list" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ReaderController#list (for 127.0.0.1 at 2010-07-24 19:17:10) [GET]
+
+TypeError (can't convert nil into String):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open_uri_original_open'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open'
+  app/controllers/reader_controller.rb:18:in `list'
+
+Rendered rescues/_trace (118.9ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ReaderController#list (for 127.0.0.1 at 2010-07-24 19:18:00) [GET]
+
+TypeError (can't convert nil into String):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open_uri_original_open'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open'
+  app/controllers/reader_controller.rb:18:in `list'
+
+Rendered rescues/_trace (52.1ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ReaderController#list (for 127.0.0.1 at 2010-07-24 19:18:01) [GET]
+
+TypeError (can't convert nil into String):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open_uri_original_open'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open'
+  app/controllers/reader_controller.rb:18:in `list'
+
+Rendered rescues/_trace (129.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#list (for 127.0.0.1 at 2010-07-24 19:18:27) [GET]
+
+MissingSourceFile (no such file to load -- open_uri):
+  app/controllers/reader_controller.rb:2
+
+Rendered rescues/_trace (52.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ReaderController#list (for 127.0.0.1 at 2010-07-24 19:18:42) [GET]
+
+TypeError (can't convert nil into String):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open_uri_original_open'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open'
+  app/controllers/reader_controller.rb:18:in `list'
+
+Rendered rescues/_trace (129.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ReaderController#list (for 127.0.0.1 at 2010-07-24 19:18:43) [GET]
+
+TypeError (can't convert nil into String):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open_uri_original_open'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open'
+  app/controllers/reader_controller.rb:18:in `list'
+
+Rendered rescues/_trace (49.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ReaderController#list (for 127.0.0.1 at 2010-07-24 19:18:44) [GET]
+
+TypeError (can't convert nil into String):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open_uri_original_open'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/open-uri.rb:32:in `open'
+  app/controllers/reader_controller.rb:18:in `list'
+
+Rendered rescues/_trace (139.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-24 19:20:14) [GET]
+
+ActionController::RoutingError (No route matches "/reader/list/http://feeds.feedburner.com/meiobit" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-24 19:20:24) [GET]
+
+ActionController::RoutingError (No route matches "/reader/list/%22http://feeds.feedburner.com/meiobit%22" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ReaderController#list (for 127.0.0.1 at 2010-07-24 19:21:57) [GET]
+  Parameters: {"id"=>"meiobit"}
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.[]):
+  app/controllers/reader_controller.rb:22:in `list'
+
+Rendered rescues/_trace (48.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ReaderController#list (for 127.0.0.1 at 2010-07-24 19:22:44) [GET]
+  Parameters: {"id"=>"meiobit"}
+Rendering reader/list
+
+ActionView::TemplateError (wrong number of arguments (0 for 1)) on line #9 of app/views/reader/list.html.erb:
+6:     <% @items.each do |i| -%>
+7:     
+8:     <div id="title">
+9:       <%= t.title %>      
+10:     </div>
+11:     
+12:     <div id="content">
+
+    app/views/reader/list.html.erb:9:in `t'
+    app/views/reader/list.html.erb:9
+    app/views/reader/list.html.erb:6:in `each'
+    app/views/reader/list.html.erb:6
+
+Rendered rescues/_trace (59.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ReaderController#list (for 127.0.0.1 at 2010-07-24 19:24:44) [GET]
+  Parameters: {"id"=>"meiobit"}
+Rendering reader/list
+
+ActionView::TemplateError (wrong number of arguments (0 for 1)) on line #13 of app/views/reader/list.html.erb:
+10:     
+11:     <div id="content">
+12:       <div id="author">
+13:         <%= t.author %>
+14:       </div>
+15:       <div id="text">
+16:         <%= i.content_encoded %>
+
+    app/views/reader/list.html.erb:13:in `t'
+    app/views/reader/list.html.erb:13
+    app/views/reader/list.html.erb:6:in `each'
+    app/views/reader/list.html.erb:6
+
+Rendered rescues/_trace (141.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ReaderController#list (for 127.0.0.1 at 2010-07-24 19:25:21) [GET]
+  Parameters: {"id"=>"meiobit"}
+Rendering reader/list
+Completed in 1279ms (View: 5, DB: 0) | 200 OK [http://localhost/reader/list/meiobit]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-24 19:25:24) [GET]
+
+ActionController::RoutingError (No route matches "/crossdomain.xml" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ReaderController#list (for 127.0.0.1 at 2010-07-24 19:27:30) [GET]
+  Parameters: {"id"=>"meiobit"}
+Rendering reader/list
+Completed in 1273ms (View: 6, DB: 0) | 200 OK [http://localhost/reader/list/meiobit]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-24 19:27:34) [GET]
+
+ActionController::RoutingError (No route matches "/crossdomain.xml" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
